@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 int main() {
-    int num, i, fact;
+    long int fact, num, i;
 
-    scanf("%d", &num);
+    scanf("%ld", &num);
 
     fact = 1;
 
@@ -12,7 +12,7 @@ int main() {
         fact *= i;
     }
     
-    printf("%d", fact);
+    printf("%ld", fact);
 
     return 0;
 }
