@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "ASCII.C": "cpp"
+        "ASCII.C": "cpp",
+        "stdlib.h": "c"
     }
 }
