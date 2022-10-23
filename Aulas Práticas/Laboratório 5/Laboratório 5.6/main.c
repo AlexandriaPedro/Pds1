@@ -1,15 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "func.h"
 
 int main() {
-    int n = 0;
-    float saldo = 0;
-
-    saldo = inicia_saldo (saldo);
-
-    scanf("%d", &n);
-
-    le_entrada (n);
-
+    double saldo = inicia_saldo();
+    
+    int entrada, i = 0, k;
+    
+    scanf("%d", &k);
+    
+    while (i <= k) {
+        
+        entrada = le_entrada();
+        
+        double n;
+        
+        if (entrada == 1) {
+            retorna_valor(saldo);
+        } else if (entrada == 2) {
+            scanf("%lf", &n);
+            saldo = deposita_valor(n, saldo);
+        } else if (entrada == 3) {
+            scanf("%lf", &n);
+            saldo = resgata_valor(n, saldo);
+        }
+    
+    i++;
+        
+    }
+    
+    
     return 0;
 }

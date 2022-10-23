@@ -3,4 +3,6 @@
 
 // TODO: Declare aqui as funções requeridas
 
+int subarranjo_maximo(int *A, int n);
+
 #endif // FUNC_H_

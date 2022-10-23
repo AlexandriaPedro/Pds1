@@ -3,14 +3,14 @@
 
 // TODO: Declare aqui as funções requeridas
 
-float inicia_saldo (float s);
+double inicia_saldo();
 
-double deposita_valor (double n);
+double deposita_valor(double n, double saldo);
 
-double resgata_valor (double n);
+double resgata_valor(double n, double saldo);
 
-double retorna_valor ();
+int retorna_valor(double saldo);
 
-int le_entrada(int n);
+int le_entrada();
 
 #endif // FUNC_H_
