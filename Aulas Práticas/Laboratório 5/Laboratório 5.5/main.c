@@ -3,7 +3,7 @@
 #include "func.h"
 
 int main() {
-    int n, i, x, r;
+    int n, i, x, arranjo;
     
     scanf("%d", &n);
     
@@ -14,9 +14,9 @@ int main() {
         A[i] = x;
     }
     
-    r = arranjo_posicoes_valido(A, n);
+    arranjo = arranjo_posicoes_valido(A, n);
     
-    printf("%d", r);
+    printf("%d", arranjo);
     
     return 0;
 }
