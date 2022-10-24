@@ -25,10 +25,8 @@ int retorna_valor(double saldo) {
 }
 
 int le_entrada(int i, double saldo) {
-    
     int n;
     scanf("%d", &n);
     
     return n;
-    
 }

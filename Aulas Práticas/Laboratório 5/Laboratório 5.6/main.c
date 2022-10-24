@@ -10,7 +10,6 @@ int main() {
     scanf("%d", &k);
     
     while (i <= k) {
-        
         entrada = le_entrada();
         
         double n;
@@ -24,11 +23,8 @@ int main() {
             scanf("%lf", &n);
             saldo = resgata_valor(n, saldo);
         }
-    
     i++;
-        
     }
-    
     
     return 0;
 }
