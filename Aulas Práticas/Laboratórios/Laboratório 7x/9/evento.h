@@ -1,25 +1,20 @@
 #ifndef EVENTO_H_
 #define EVENTO_H_
 
-typedef enum Mes { 
-    // TODO: completar
-
+typedef enum Mes {
     JAN, FEV, MAR, ABR, MAI, JUN, JUL, AGO, SET, OUT, NOV, DEZ
 } Mes;
 
 typedef struct Data {
-    // TODO: completar campos
-
+    unsigned dia;
     enum Mes mes;
-    int dia, ano;
+    unsigned ano;
 } Data;
 
 typedef struct Evento {
-    // TODO: completar
-
-    char nome[100];
-    char local[100];
-    Data d;
+    char nome[101]; // 100 caracteres + 1 \0
+    char local[101]; // 100 caracteres + 1 \0
+    Data data;
 } Evento;
 
 void cadastrar_eventos(Evento *agenda, int n);

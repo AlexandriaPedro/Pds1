@@ -3,24 +3,21 @@
 #include "evento.h"
 
 int main(int argc, char *argv[]) {
-    // Escreva seu código aqui
-
     int n;
-
     scanf("%d", &n);
 
     Evento agenda[100];
-
     cadastrar_eventos(agenda, n);
 
     Data d;
+    scanf("%u", &d.dia);
+
     unsigned mes;
-
-    scanf("%u %u %u", &d.dia, &mes, &d.ano);
-
+    scanf("%u", &mes);
     d.mes = mes;
 
-    imprimir_eventos(agenda, d, n);
+    scanf("%u", &d.ano);
 
+    imprimir_eventos(agenda, d, n);
     return 0;
 }
