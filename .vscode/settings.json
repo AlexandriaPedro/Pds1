@@ -2,5 +2,6 @@
     "files.associations": {
         "ASCII.C": "cpp",
         "stdlib.h": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
 }
