@@ -10,7 +10,9 @@ int main(int argc, char *argv[]) {
     char* num_chr = converte_para_char(&numero);
     // Adicione os prints para os numeros convertidos abaixo:
     
-    
+    printf("%d\n", *num_int);
+    printf("%f\n", *num_flt);
+    printf("%c", *num_chr);
     
     return 0;
 }

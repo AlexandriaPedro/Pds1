@@ -13,8 +13,8 @@ void adiciona_celebridade(celebridade *c) {
 } 
 
 void exibe_celebridade(celebridade *c) {
-    printf(c->nome);
-    printf("%02d de %02d de %04d", c->dia_nascimento, c->mes_nascimento, c->ano_nascimento);
+    printf("%s", c->nome);
+    printf("%02d de %02d de %04d\n", c->dia_nascimento, c->mes_nascimento, c->ano_nascimento);
 }
 
 void adiciona_celebridades(celebridade *c, int n) {
