@@ -91,7 +91,7 @@ char *des_vignere(char *cifrado, char *chave) {
 bool autenticar(Usuario u, BancoDados bd) {
     // TODO
 
-    int tamanho_banco_de_usuarios = (int) sizeof(bd.usuarios);
+    int tamanho_banco_de_usuarios = bd.n;
 
     for (int i = 0; i < tamanho_banco_de_usuarios; i ++ ) {
         if (strcmp(u.usuario, bd.usuarios[i].usuario) == 0) {
