@@ -7,7 +7,7 @@ typedef struct Usuario {
     // TODO: completar campos
 
     char *usuario;
-    char senha;
+    char *senha;
 
 } Usuario;
 

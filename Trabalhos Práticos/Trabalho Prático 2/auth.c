@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 #define TAM_ALFABETO 26
 char *vignere(char *texto, char *chave) {
     // TODO
@@ -12,11 +13,10 @@ char *vignere(char *texto, char *chave) {
 
     char compara[tamanho_texto];
 
+    int c = 0;
 
     for (int i = 0; i < tamanho_texto; i ++) {
-        int c = 0;
-
-        if (c > tamanho_chave) {
+        if (c >= tamanho_chave) {
             c = 0;
         }
 
@@ -35,7 +35,7 @@ char *vignere(char *texto, char *chave) {
         int possivel_letra = comeco + diferenca;
 
         if (possivel_letra > 25) {
-            possivel_letra = possivel_letra -  25;
+            possivel_letra = possivel_letra -  26;
         }
 
         texto_criptografado[i] = (char) ((possivel_letra) + (int) 'a');
@@ -54,11 +54,10 @@ char *des_vignere(char *cifrado, char *chave) {
 
     char compara[tamanho_cifrado];
 
+    int c = 0;
 
     for (int i = 0; i < tamanho_cifrado; i ++) {
-        int c = 0;
-
-        if (c > tamanho_chave) {
+        if (c >= tamanho_chave) {
             c = 0;
         }
 
@@ -77,7 +76,7 @@ char *des_vignere(char *cifrado, char *chave) {
         int possivel_letra = diferenca - comeco;
 
         if (possivel_letra < 0) {
-            possivel_letra = 25 + possivel_letra;
+            possivel_letra = 26 + possivel_letra;
         }
 
         texto_descriptografado[i] = (char) ((possivel_letra) + (int) 'a');
@@ -93,17 +92,25 @@ bool autenticar(Usuario u, BancoDados bd) {
 
     int tamanho_banco_de_usuarios = bd.n;
 
+    int auxilar = -1;
+
     for (int i = 0; i < tamanho_banco_de_usuarios; i ++ ) {
         if (strcmp(u.usuario, bd.usuarios[i].usuario) == 0) {
-            char senha_descriptografada = des_vignere(bd.usuarios[i].senha, bd.usuarios[i].usuario);
+            auxilar = i;
 
-            if (strcmp(senha_descriptografada, u.senha) == 0) {
+            break;
+        }
+    }
+
+    if (auxilar == -1) {
+        return false;
+    } else {
+        char *senha_descriptografada = des_vignere(bd.usuarios[auxilar].senha, bd.usuarios[auxilar].usuario);
+
+        if (strcmp(senha_descriptografada, u.senha) == 0) {
                 return true;
             } else {
                 return false;
             }
-        } else {
-            return false;
-        }
     }
 }
