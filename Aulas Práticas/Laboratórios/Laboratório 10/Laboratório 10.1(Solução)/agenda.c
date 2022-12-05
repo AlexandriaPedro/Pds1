@@ -5,7 +5,6 @@
 #include <string.h>
 
 // TODO: implemente as funções requeridas
-
 #define TAM_BUFFER 50
 char *read_line(FILE *stream) {
     char *buffer = (char *) malloc(TAM_BUFFER * sizeof(char));
@@ -26,48 +25,44 @@ char *read_line(FILE *stream) {
 
 Contato criar_contato(void) {
     Contato c;
-    
+
     c.nome = read_line(stdin);
 
     scanf("%d\n", &c.idade);
-    fgets(c.numero, 12, stdin);
+    fgets(c.celular, 12, stdin);
 
-    getchar();
-
+    getchar(); // quebra de linha
     return c;
 }
 
-bool inserir_contato(char *arquivo, Contato c) {
-    FILE *f = fopen(arquivo, "a");
+bool inserir_contato(Contato c, char *nome_arquivo) {
+    FILE *p = fopen(nome_arquivo, "a");
 
-    if (f == NULL) {
+    if (p == NULL) {
         return false;
     }
 
-    fprintf(f, "%s#%d#%s\n", c.nome, c.idade, c.numero);
+    fprintf(p, "%s#%d#%s\n", c.nome, c.idade, c.celular);
 
-    fclose(f);
-
+    fclose(p);
     return true;
 }
 
-bool exibir_contatos(char *nome_arquivo){
+bool exibir_contatos(char *nome_arquivo) {
     Contato c;
+    
+    FILE *p = fopen(nome_arquivo, "r");
 
-    FILE *f = fopen(nome_arquivo, "r");
-
-    if (f == NULL) {
+    if (p == NULL) {
         return false;
     }
 
-   char *contato = read_line(f);
-
-    while (!feof(f)) {
+    char *contato = read_line(p);
+    while (!feof(p)) {
         printf("%s\n", contato);
-        contato = read_line(f);
+        contato = read_line(p);
     }
 
-    fclose(f);
-    
+    fclose(p);
     return true;
 }
