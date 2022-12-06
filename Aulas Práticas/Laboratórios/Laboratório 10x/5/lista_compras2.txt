@@ -1,0 +1,6 @@
+Pizza       5       42.99
+Lasanha     2       12.99
+Coxinha     122     1.00
+Pastel      122     1.50
+Arroz       6       11.60
+Feijão      9       16.90

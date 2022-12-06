@@ -1,0 +1,8 @@
+Abacate     12      6.60
+Abacaxi     1       1.23
+Açaí        56      7.26
+Acerola     76      9.08
+Amora       12      4.23
+Araticum    32      123.32
+Bacaba      24      99.99
+Banana      6       1.99
