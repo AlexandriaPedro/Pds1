@@ -1,3 +1,2 @@
-//1) Escreva um programa que contenha duas variáveis inteiras. Compare seus
-//endereços e exiba o maior endereço (dica printf formatação %p).
-
+//1) Escreva um programa que leia do usuário o nome de um arquivo texto.
+//Em seguida, mostre na tela quantas linhas esse arquivo possui.

@@ -1,6 +1,3 @@
-//8) Considere a seguinte declaração:
-//int a, *b, **c, ***d;
-//Escreva um programa que leia a variável a e calcule e exiba o dobro, o triplo e
-//o quádruplo desse valor utilizando apenas os ponteiros b, c e d. O ponteiro b
-//deve ser usado para calcular o dobro, c, o triplo, e d, o quádruplo.
-
+//8) Escreva uma função que receba um vetor e seu tamanho como
+//parâmetros e sal- ve-a em um arquivo texto de nome “vetor.txt”. Cada
+//valor do vetor deve ser salvo em uma linha do arquivo.

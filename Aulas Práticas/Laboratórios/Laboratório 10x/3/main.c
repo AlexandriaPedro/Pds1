@@ -1,3 +1,3 @@
-//3) Crie um programa que contenha um array de float contendo 10 elementos.
-//Imprima o endereço de cada posição desse array.
-
+//3) Escreva um programa para converter o conteúdo de um arquivo texto
+//em caracteres maiúsculos. O programa deverá ler do usuário o nome do
+//arquivo a ser convertido e o nome do arquivo a ser salvo.
